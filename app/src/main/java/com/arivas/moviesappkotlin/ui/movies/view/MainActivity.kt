@@ -1,7 +1,8 @@
-package com.arivas.moviesappkotlin
+package com.arivas.moviesappkotlin.ui.movies.view
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.arivas.moviesappkotlin.R
 
 class MainActivity : AppCompatActivity() {
 
