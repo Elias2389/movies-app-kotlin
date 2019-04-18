@@ -13,8 +13,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 
-class MoviesInteractorImpl(private val presenter: MoviesPresenter): MoviesInteractor {
-
+class MoviesInteractorImpl(private val presenter: MoviesPresenter, private val service: RetrofitService): MoviesInteractor {
 
     @SuppressLint("CheckResult")
     override fun popularMovies() {
@@ -38,7 +37,7 @@ class MoviesInteractorImpl(private val presenter: MoviesPresenter): MoviesIntera
     }
 
     private fun getService(): MoviesServices {
-        return RetrofitService.client().create(MoviesServices::class.java)
+        return service.client().create(MoviesServices::class.java)
     }
 
     private fun getCall(): Observable<MoviesResponse> {
