@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.view.animation.LayoutAnimationController
 import com.arivas.moviesappkotlin.R
 import com.arivas.moviesappkotlin.common.dto.MoviesResponse
 import com.arivas.moviesappkotlin.ui.movies.adapter.PopularMoviesRecyclerView
@@ -15,6 +18,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
     private var recyclerView: RecyclerView? = null
     private var mAdapter: RecyclerView.Adapter<*>? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
+    private var animationController: LayoutAnimationController? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +44,6 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
     }
 
     override fun error() {
-        
+
     }
 }
