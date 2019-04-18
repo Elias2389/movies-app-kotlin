@@ -39,6 +39,9 @@ ext {
     roomVersion = "1.1.1"
     archLifecycleVersion = "1.1.1"
     daggerVersion = "2.20"
+    rxJavaVersion = "2.2.6"
+    rxAndroidVersion = "2.1.1"
+    rxAdapter = "2.4.0"
 }
 
 dependencies {
@@ -77,6 +80,12 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //RX java
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxAdapter"
+
 }
 repositories {
     mavenCentral()
