@@ -88,6 +88,9 @@ dependencies {
     // Koin Android ViewModel feature
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
+    //Shimmer layout
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+
 }
 repositories {
     mavenCentral()
