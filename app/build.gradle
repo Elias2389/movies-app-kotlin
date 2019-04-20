@@ -42,6 +42,7 @@ ext {
     rxJavaVersion = "2.2.6"
     rxAndroidVersion = "2.1.1"
     rxAdapter = "2.4.0"
+    koin_version = "2.0.0-rc-2"
 }
 
 dependencies {
@@ -75,18 +76,23 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$archLifecycleVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$archLifecycleVersion"
 
-    //Dagger
-    implementation "com.google.dagger:dagger-android:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
     //RX java
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$rxAdapter"
 
+    // Koin for Android
+    implementation "org.koin:koin-android:$koin_version"
+    // Koin Android Scope feature
+    implementation "org.koin:koin-android-scope:$koin_version"
+    // Koin Android ViewModel feature
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    //Shimmer layout
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+
 }
 repositories {
     mavenCentral()
+    jcenter()
 }
