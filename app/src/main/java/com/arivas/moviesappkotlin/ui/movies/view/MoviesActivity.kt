@@ -32,8 +32,8 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         shimmerLayout = findViewById(R.id.shimmer)
         container = findViewById(R.id.container_info)
         recyclerView = findViewById(R.id.recycler_view)
-        presenter = MoviesPresenterImpl(this, service)
 
+        createPresenter()
         popularMovies()
     }
 
@@ -54,6 +54,10 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
 
     override fun error() {
 
+    }
+
+    override fun createPresenter() {
+        presenter = MoviesPresenterImpl(this, service)
     }
 
     private fun showShimmer() {

@@ -17,4 +17,9 @@ interface MoviesView {
      * On error
      */
     fun error()
+
+    /**
+     * Create presenter
+     */
+    fun createPresenter()
 }
