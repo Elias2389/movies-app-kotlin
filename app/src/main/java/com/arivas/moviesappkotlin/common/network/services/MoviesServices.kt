@@ -12,7 +12,7 @@ interface MoviesServices {
     @GET("popular?")
     fun getPopularMovies(@Query("api_key") apiKey: String): Observable<MoviesResponse>
 
-    @GET("/movie/{movie_id}?")
+    @GET("{movie_id}?")
     fun getDetailMovie(@Path("movie_id") movieId: Int,
                        @Query("api_key") apiKey: String): Observable<DetailMovie>
 }

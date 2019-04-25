@@ -20,16 +20,25 @@
                 android:fitsSystemWindows="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:toolbarId="@+id/toolbar"
+                app:toolbarId="@+id/toolbar_detail"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="?attr/colorPrimary">
 
+            <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/image_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:placeholderImage="@color/background"
+            />
+
             <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
+                    android:id="@+id/toolbar_detail"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_width="match_parent"
                     app:layout_collapseMode="pin"
-                    app:popupTheme="@style/AppTheme.PopupOverlay"/>
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
